@@ -4,7 +4,7 @@ var PDFController = require("pdf.js-controller");
 var container = document.getElementById("pdf-container");
 var controller = new PDFController({
     container: container,
-    pdfjsDistDir: "/node_modules/pdfjs-dist/"
+    pdfjsDistDir: "/pdfjs-dist/"
 });
 var PDFURL = "./example.pdf";
 controller.loadDocument(PDFURL).then(initializedEvent).catch(function (error) {
@@ -58,4 +58,3 @@ function initializedEvent() {
 
     };
 }
-
